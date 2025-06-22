@@ -49,4 +49,17 @@ class ProfileConstants {
       linkedin: 'https://www.linkedin.com/in/samarthvkulkarni',
     ),
   );
+
+    static const ProfileModel ajinkyaKaranjikarProfile = ProfileModel(
+    name: 'Ajinkya Karanjikar',
+    role: 'Senior Software Engineer',
+    currentProject: 'Kindkart',
+    imageUrl: 'https://avatars.githubusercontent.com/u/37205552?v=4',
+    description: 'A Software Engineer who loves his job!',
+    socialLinks: SocialLinks(
+      hackerrank: 'https://www.hackerrank.com/samrocks003/',
+      github: 'https://github.com/AjinkyaASK',
+      linkedin: 'https://www.linkedin.com/in/ajinkyakaranjikar/',
+    ),
+  );
 }

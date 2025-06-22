@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignments/constants/profile_constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tailwind_standards/tailwind_standards.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
 class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key});
+  const ProfileCard({super.key, this.profile});
+
+  final ProfileModel? profile;
+
 
   Future<void> _launchURL(String urlString) async {
     try {
@@ -79,10 +83,10 @@ class ProfileCard extends StatelessWidget {
                       border: Border.all(color: Colors.white, width: 2),
                     ),
             
-                    child: const CircleAvatar(
+                    child: CircleAvatar(
                       radius: 50,
                       backgroundImage: NetworkImage(
-                        'https://avatars.githubusercontent.com/u/85547877?v=4',
+                        profile?.imageUrl ?? 'https://avatars.githubusercontent.com/u/85547877?v=4',
                       ),
                     ),
                     
@@ -98,8 +102,8 @@ class ProfileCard extends StatelessWidget {
                     
                     child: Column(
                       children: [
-                        const Text(
-                          'Samarth Kulkarni',
+                         Text(
+                          profile?.name ?? 'Samarth Kulkarni',
                           style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 22,
@@ -109,13 +113,13 @@ class ProfileCard extends StatelessWidget {
                     
                           const SizedBox(height: 2),
                     
-                          const Text(
-                                'Software Engineer',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white54,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                          Text(
+                            profile?.role ?? 'Software Engineer',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white54,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                     
                           const SizedBox(height: 8),
@@ -127,9 +131,9 @@ class ProfileCard extends StatelessWidget {
                           ),
                     
                           const SizedBox(height: 8),
-                    
-                          const Text(
-                            'An engineer powered by curiosity!',
+
+                          Text(
+                            profile?.description ?? 'An engineer powered by curiosity!',
                             style: TextStyle(
                               fontSize: 13,
                               color: Colors.white70,
@@ -148,7 +152,7 @@ class ProfileCard extends StatelessWidget {
                               children: [
                                 GestureDetector(
                                   // borderRadius: BorderRadius.circular(20),
-                                  onTap: () => _launchURL('https://www.hackerrank.com/samrocks003'),
+                                  onTap: () => _launchURL(profile?.socialLinks.hackerrank ?? 'https://www.hackerrank.com/samrocks003'),
                                   child: const FaIcon(
                                     FontAwesomeIcons.hackerrank,
                                     color: Color(0xFFED213A),
@@ -159,7 +163,7 @@ class ProfileCard extends StatelessWidget {
                                 const SizedBox(width: 20),
                   
                                 GestureDetector(
-                                  onTap: () => _launchURL('https://github.com/samrocks03'),
+                                  onTap: () => _launchURL(profile?.socialLinks.github ?? 'https://github.com/samrocks03'),
                                   child: const FaIcon(
                                     FontAwesomeIcons.github,
                                     color: Color(0xFFED213A),
@@ -170,7 +174,7 @@ class ProfileCard extends StatelessWidget {
                                 const SizedBox(width: 20),
                   
                                 GestureDetector(
-                                  onTap: () => _launchURL('https://www.linkedin.com/in/samarthvkulkarni'),
+                                  onTap: () => _launchURL(profile?.socialLinks.linkedin ?? 'https://www.linkedin.com/in/samarthvkulkarni'),
                                   child: const FaIcon(
                                     FontAwesomeIcons.linkedin,
                                     color: Color(0xFFED213A),
