@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignments/assignments/assignment_one/profile_card.dart';
 import 'package:tailwind_standards/tailwind_standards.dart';
 
 
@@ -32,11 +33,11 @@ class AllAssignments extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.slate100,
+        backgroundColor: TColor.slate300,
         title: Text(
           title!,
           style: TextStyle(
-            color: TColor.emerald700,
+            color: TColor.slate800,
             fontSize: 24,
           ),
         ),
@@ -55,9 +56,13 @@ class AllAssignments extends StatelessWidget {
                     backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/85547877?v=4'),
                     radius: 40,
                   ),
+                  
                   SizedBox(height: 10),
+                  
                   Text('Samarth Kulkarni', style: TextStyle(color: TColor.slate100, fontSize: 24)),
+                  
                   Text('Software Engineer', style: TextStyle(color: TColor.slate100.withOpacity(0.9), fontSize: 14)),
+                  
                   Text('Current Project: Kindkart', style: TextStyle(color: TColor.slate100.withOpacity(0.8), fontSize: 12)),
                 ],
               ),
@@ -69,12 +74,21 @@ class AllAssignments extends StatelessWidget {
       body: Align(
         alignment: Alignment.topCenter,
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          spacing: 10,
+          spacing: 20,
           children: [
-            Text('All assignments will be listed here:')
+            SizedBox(height: 10),
 
+            Text('All assignments will be listed here:'),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileCard()),
+                );
+              },
+              child: Text('Assignment 1: Profile Card'),
+            ),
           ],
         ),
       )
