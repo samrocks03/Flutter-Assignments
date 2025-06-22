@@ -65,6 +65,19 @@ class AllAssignments extends StatelessWidget {
           ],
         ),
       ),
+
+      body: Align(
+        alignment: Alignment.topCenter,
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          spacing: 10,
+          children: [
+            Text('All assignments will be listed here:')
+
+          ],
+        ),
+      )
     );
   }
 }
