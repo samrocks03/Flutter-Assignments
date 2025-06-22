@@ -49,4 +49,4 @@ class ProfileConstants {
       linkedin: 'https://www.linkedin.com/in/samarthvkulkarni',
     ),
   );
-  }
+}

@@ -37,58 +37,62 @@ class ProfileCard extends StatelessWidget {
           decoration: BoxDecoration(
             // color: TColor.slate200,
             borderRadius: BorderRadius.circular(30),
-            boxShadow: [
-              BoxShadow(
-                // blurRadius: 10,
-                // offset: Offset(0, 5),
-                // color: TColor.slate500
-              ),
-            ],
+            // boxShadow: [
+            //   BoxShadow(
+            //     // blurRadius: 10,
+            //     // offset: Offset(0, 5),
+            //     // color: TColor.slate500
+            //   ),
+            // ],
           ),
 
-          child: Column(
-            children: [
-              Container(
-                height: 200,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(20), bottom: Radius.circular(20)),
-                  gradient: LinearGradient(
-                    colors: [
-                      Color(0xFFED213A),
-                      Color(0xFF93291E),
-                    ],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ),
-                ),
-              ),
-
-              // Profile Image section
-              Transform.translate(
-                offset: Offset(0, -50),
-                child: Container(
-                  padding: const EdgeInsets.all(2),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 2),
-                  ),
-
-                  child: const CircleAvatar(
-                    radius: 50,
-                    backgroundImage: NetworkImage(
-                      'https://avatars.githubusercontent.com/u/85547877?v=4',
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.black,
+                borderRadius: BorderRadius.circular(30),
+            ),
+            child: Column(
+              children: [
+                Container(
+                  height: 200,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+                    gradient: LinearGradient(
+                      colors: [
+                        Color(0xFFED213A),
+                        Color(0xFF93291E),
+                      ],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
                     ),
                   ),
-                  
                 ),
-              ),
-
-
-              // Content Section:
-              Transform.translate(
-                offset: Offset(0, -20),
-                child: Expanded(
+            
+                // Profile Image section
+                Transform.translate(
+                  offset: Offset(0, -50),
+                  child: Container(
+                    padding: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 2),
+                    ),
+            
+                    child: const CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                        'https://avatars.githubusercontent.com/u/85547877?v=4',
+                      ),
+                    ),
+                    
+                  ),
+                ),
+            
+            
+                // Content Section:
+                Transform.translate(
+                  offset: Offset(0, -20),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     
@@ -179,9 +183,9 @@ class ProfileCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           )
         ),
       ),
