@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignments/assignments/assignment_one/drawer.dart';
 import 'package:flutter_assignments/assignments/home.dart';
-import 'package:flutter_assignments/constants/profile_constants.dart';
+import 'package:flutter_assignments/models/profile_constants.dart';
 import 'package:flutter_assignments/routes/route_generator.dart';
 import 'package:tailwind_standards/tailwind_standards.dart';
 
