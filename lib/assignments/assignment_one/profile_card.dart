@@ -15,11 +15,11 @@ class ProfileCard extends StatelessWidget {
     try {
       final Uri url = Uri.parse(urlString);
       
-      if (await canLaunchUrl(url)) {
+      // if (await canLaunchUrl(url)) {
         await launchUrl(url, mode: LaunchMode.externalApplication);
-      } else {
-        debugPrint('Could not launch $urlString');
-      }
+      // } else {
+        // debugPrint('Could not launch $urlString');
+      // }
     } catch (e) {
       debugPrint('Error launching URL: $e');
     }

@@ -3,6 +3,7 @@ import 'package:flutter_assignments/assignments/assignment_one/profile_card.dart
 import 'package:flutter_assignments/constants/profile_constants.dart';
 import 'package:flutter_assignments/main.dart';
 import 'package:flutter_assignments/routes/route_names.dart';
+import 'package:flutter_assignments/time_pass.dart';
 
 class RouteGenerator {
   // static const String home = '/';
@@ -12,6 +13,7 @@ class RouteGenerator {
   static const String home = RouteNames.home;
   static const String profileCard = RouteNames.profileCard;
   static const String profileCardWithData = RouteNames.profileCardWithData;
+  static const String timePass = RouteNames.timePass;
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -39,6 +41,9 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => ProfileCard(profile: ProfileConstants.samarthKulkarniProfile),
         );
+
+      case timePass:
+        return MaterialPageRoute(builder: (_) => TimePass());
 
         default:
           return MaterialPageRoute(
