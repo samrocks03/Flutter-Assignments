@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_assignments/constants/accessories_styles.dart';
-import 'package:flutter_assignments/constants/profile_constants.dart';
+import 'package:flutter_assignments/helpers/accessories_styles.dart';
+import 'package:flutter_assignments/models/profile_constants.dart';
 import 'package:flutter_assignments/helpers/navigation_helpers.dart';
 import 'package:flutter_assignments/routes/route_names.dart';
 
@@ -40,9 +40,9 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(
               style: roundedElevatedButtonStyle,
               onPressed: () {
-                Navigator.pushNamed(context, RouteNames.timePass);
+                Navigator.pushNamed(context, RouteNames.login);
               },
-              child: Text('TP card'),
+              child: Text('Assignment 3: Login'),
             ),
 
           ],

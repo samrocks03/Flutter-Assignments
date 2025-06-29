@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_assignments/constants/profile_constants.dart';
+import 'package:flutter_assignments/models/profile_constants.dart';
 import 'package:flutter_assignments/helpers/navigation_helpers.dart';
 import 'package:tailwind_standards/tailwind_standards.dart';
 

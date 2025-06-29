@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_assignments/constants/profile_constants.dart';
+import 'package:flutter_assignments/models/profile_constants.dart';
 import 'package:flutter_assignments/routes/route_names.dart';
 
 class NavigationHelpers {
